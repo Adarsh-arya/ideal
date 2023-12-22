@@ -1,0 +1,97 @@
+.header {
+    z-index: 1;
+    height: calc(100vh - 80px);
+    max-height: 650px;
+    // background-color: red;
+    .boxShadow {
+        width: 500px;
+        height: 500px;
+        background-color: #195357bd;
+        filter: blur(500px);
+        border-radius: 100px;
+        position: absolute;
+        margin-top: 200px;
+        margin-left: -300px;
+        z-index: -1;
+    }
+    .headerSec {
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            .title {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                h1 {
+                    font-size: 55px;
+                }
+                h4 {
+                    font-size: 25px;
+                    opacity: 0.7;
+                }
+                h3 {
+                    font-size: 45px;
+                }
+            }
+            p {
+                margin-top: 15px;
+                margin-bottom: 20px;
+                opacity: 0.8;
+                font-size: 14px;
+                line-height: 30px;
+            }
+            .actionBtn {
+                height: 60px;
+                line-height: 60px;
+                text-align: center;
+                width: 200px;
+                display: flex;
+                justify-content: center;
+                font-size: 20px;
+                align-items: center;
+                border-radius: 100px;
+                background: linear-gradient(95deg, #0d2b36 0%, #182673 100%);
+                text-decoration: none;
+                color: #ffffffdc;
+                display: block;
+            }
+            .callNowBtn {
+                color: #ffffffdc;
+                text-decoration: none;
+                font-size: 20px;
+                margin: 20px 0px;
+            }
+        }
+        .sideImage {
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .header {
+        z-index: 1;
+        height: auto;
+        max-height: 100%;
+        .headerSec {
+            grid-template-columns: auto;
+            .content {
+                .callNowBtn {
+                    color: #ffffffdc;
+                    text-decoration: none;
+                    font-size: 15px;
+                    margin: 20px 0px;
+                }
+            }
+        }
+    }
+}
